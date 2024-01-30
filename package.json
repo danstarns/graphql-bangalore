@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "clean": "rm -rf node_modules && rm -rf ./prisma/dev.db",
+    "migrate": "npx prisma migrate dev",
     "start": "npx ts-node src/index.ts",
     "debugger": "npx graphql-debugger"
   },
@@ -11,13 +13,18 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@graphql-debugger/adapter-proxy": "0.0.0-alpha.84",
-    "@graphql-debugger/trace-schema": "0.0.0-alpha.84",
+    "@graphql-debugger/adapter-proxy": "0.0.0-alpha.96",
+    "@graphql-debugger/plugin-express": "0.0.0-alpha.96",
+    "@graphql-debugger/trace-schema": "0.0.0-alpha.96",
     "@graphql-tools/schema": "10.0.2",
+    "@prisma/client": "5.8.1",
+    "@prisma/instrumentation": "5.8.1",
+    "express": "4.18.2",
     "graphql": "16.8.1",
-    "graphql-debugger": "0.0.0-alpha.84",
+    "graphql-debugger": "0.0.0-alpha.96",
     "graphql-yoga": "5.1.1",
-    "ts-node": "^10.9.2",
+    "prisma": "5.8.1",
+    "ts-node": "10.9.2",
     "typescript": "5.3.3"
   }
 }
